@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDM1 - Week 1 Practical 1 - Exericse 1.1</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../lib/main-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../lib/libraries/p5.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Exercise 1.1</h1>
+    <p>Your sketch:</p>
+    <div class="guidance">
+        <h2>Instructions</h2>
+        <div>
+            <p>Create a sketch that is 600 pixels by 400 pixels. The sketch should have a black background.</p>
+            <p>Store the 100 most recent mouse coordinates, and use these coordinates to draw circles that appear to 
+                follow the path of the mouse. You may choose any size and fill colour you like but the fill should appear to fade out 
+                from the circle at the most recent coordinate to the circle at the oldest coordinates. Take a look at the video of 
+                the expected output below to get a sense of what you're being asked to do.</p>
+            <p>Expected output:</p>
+            <video width="600" height="400" controls>
+                <source src="./assets/exercise1-1.mov" type="video/mp4">
+                Your browser does not support the video tag.
+             </video> 
+        </div>
+        <div>
+            <button class="btn btn-primary hint" type="button" data-bs-toggle="collapse" data-bs-target="#hint" aria-expanded="false" aria-controls="hint">
+                Hint
+            </button>
+            <div class="collapse" id="hint">
+                <div class="card card-body">
+                    <p>You only need to edit sketch.js.</p>
+                    <p>The key to this exercise is making good use of arrays and a for loop. You will need one array to store the 
+                        mouseX values and another array to store the mouseY values. Each time <code>draw()</code> runs, 
+                        add the current mouseX and mouseY values to the arrays.
+                    </p>
+                    <p>In order to limit the size of the array to 100 and keep track of the mouse coordinates in order, you will 
+                        need to use some of JavaScript's handy array methods. Take a look at these:
+                    </p>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift" target="_blank"><code>unshift()</code></a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" target="_blank"><code>pop()</code></a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" target="_blank"><code>slice()</code></a></li>
+                    </ul>
+                    <p>To make the circles fade, use the index in the for loop and perform a simple calculation to work out an alpha value 
+                        for each circle.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
